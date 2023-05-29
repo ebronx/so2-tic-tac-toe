@@ -1,4 +1,6 @@
 import random
+import time
+
 
 def ai_move(myboard):
     print("Get AI move")
@@ -15,7 +17,9 @@ def get_user_move(myboard):
     print("0   1   2")
     print("3   4   5")
     print("6   7   8")
-    while True:
+
+    start = time.time()
+    while (time.time() - start) < 5:
         while True:
             choice = int(input("Insert number from 0 to 8"))
             if choice in options:
@@ -27,6 +31,9 @@ def get_user_move(myboard):
             return choice
         else:
             print("Ta część planszy jest już zajęta")
+
+    if choice is None:
+        print("Czas na wprowadzenie wartości minął.")
 
 
 
