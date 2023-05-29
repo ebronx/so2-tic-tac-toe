@@ -34,6 +34,7 @@ def get_user_move(myboard):
 
     if choice is None:
         print("Czas na wprowadzenie wartości minął.")
+        return None
 
 
 
