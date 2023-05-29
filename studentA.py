@@ -1,3 +1,5 @@
+from main import board
+
 new_board = [' '] * 9
 
 def print_board(board):
