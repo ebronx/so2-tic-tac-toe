@@ -8,6 +8,11 @@ players_move = is_player_starting()
 while not is_game_over(board):
     print_board(board)
     board = players_move and get_user_move(board) or ai_move(board)
+    choice = get_user_move()
+    if (players_move):
+        board[choice]='X'
+    else:
+        board[choice] = 'O'
     players_move = not players_move
 
-announce_outcome(board,players_move)
+#announce_outcome(board,players_move)
